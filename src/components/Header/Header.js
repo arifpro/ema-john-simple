@@ -33,8 +33,13 @@ const Header = () => {
                 <a href="/review">Order Review</a>
                 <a href="/inventory">Manage Inventory</a>
                 {
-                    auth.user ?
-                    <a href="/login" style={{ color: 'yellow' }}>{auth.user.name}</a>
+                    auth.user &&
+                    <a href="/login" style={{ color: 'yellow' }}>
+                        Welcome, {auth.user.name}
+                    </a>
+                }
+                {
+                    auth.user ? <a href="/login">Sign out</a>
                     : <a href="/login">Sign in</a>
                 }
             </nav>

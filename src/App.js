@@ -20,7 +20,6 @@ import Shipment from './components/Shipment/Shipment';
 // export const UserContext = createContext();
 
 function App(props) {
-    const user = {name: 'Arif', email: 'arif.swfu@outlook.com'}
     return (
         <div>
             <AuthContextProvider>

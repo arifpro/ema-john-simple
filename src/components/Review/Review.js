@@ -8,6 +8,7 @@ import Cart from '../Cart/Cart';
 import happyImage from '../../images/giphy.gif'
 import { Link } from 'react-router-dom';
 import { useAuth } from '../Login/useAuth';
+import './Review.css'
 
 const Review = () => {
     const [cart, setCart] = useState([])
@@ -56,6 +57,9 @@ const Review = () => {
                         product={pd}></ReviewItem>)
                 }
                 {thankYou}
+                {
+                    !cart.length && <h1>Your cart is empty. <a href="/shop">Keep shopping</a></h1> 
+                }
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>

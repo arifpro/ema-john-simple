@@ -13,7 +13,13 @@ const Login = () => {
             window.location.pathname = '/review'
         })
     }
-    console.log(auth);
+    // console.log(auth);
+    const handleSignOut = () => {
+        auth.signOut()
+        .then(res => {
+            window.location.pathname = '/'
+        })
+    }
     return (
         <div className="main">
             <h1>Join the party!!!</h1>
@@ -21,7 +27,7 @@ const Login = () => {
             {
                 auth.user ? 
                 // <button onClick={auth.signOut}>Sign out</button> 
-                <button onClick={auth.signOut}>
+                <button onClick={handleSignOut}>
                     <img src={signOutBtn} alt="" />
                 </button>
                 :

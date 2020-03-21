@@ -6,10 +6,13 @@ import fakeData from '../../fakeData';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import Cart from '../Cart/Cart';
 import happyImage from '../../images/giphy.gif'
+import { Link } from 'react-router-dom';
+import { useAuth } from '../Login/useAuth';
 
 const Review = () => {
-    const [ cart, setCart ] = useState([])
+    const [cart, setCart] = useState([])
     const [orderPlaced, setOrderPlaced] = useState(false)
+    const auth = useAuth()
 
     const handlePlaceOrder = () => {
         // console.log("place order");
@@ -30,7 +33,7 @@ const Review = () => {
         const savedCart = getDatabaseCart()
         const productKeys = Object.keys(savedCart)
         const cartProducts = productKeys.map(key => {
-            const product = fakeData.find(pd => pd.key===key)
+            const product = fakeData.find(pd => pd.key === key)
             product.quantity = savedCart[key]
             return product
         })
@@ -41,7 +44,7 @@ const Review = () => {
     let thankYou;
     if (orderPlaced) {
         thankYou = <img src={happyImage} alt="" />
-    } 
+    }
     return (
         <div className="twin-container">
             <div className="product-container">
@@ -52,13 +55,22 @@ const Review = () => {
                         removeProduct={removeProduct}
                         product={pd}></ReviewItem>)
                 }
-                { thankYou }
+                {thankYou}
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
-                    <button onClick={handlePlaceOrder} className="main-button">
-                        <FontAwesomeIcon icon={faShoppingBag} /> Place Order
-                    </button>
+                    <Link to="/shipment">
+                        {
+                            auth.user ?
+                            <button className="main-button">
+                                <FontAwesomeIcon icon={faShoppingBag} /> Proceed Checkout
+                            </button>
+                            :
+                            <button className="main-button">
+                                <FontAwesomeIcon icon={faShoppingBag} /> Login to Proceed
+                            </button>
+                        }
+                    </Link>
                 </Cart>
             </div>
         </div>

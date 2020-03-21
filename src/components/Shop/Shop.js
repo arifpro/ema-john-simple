@@ -13,6 +13,11 @@ const Shop = () => {
     const [products, setProducts] = useState(first10);
     const [cart, setCart] = useState([]);
 
+    const [count, setCount] = useState(0)
+    // console.log(count);
+
+    // useEffect()
+
     useEffect(() => {
         const savedCart = getDatabaseCart()
         const productKeys = Object.keys(savedCart)
@@ -21,9 +26,9 @@ const Shop = () => {
             product.quantity = savedCart[existingKey]
             return product
         })
-        // console.log(previousCart);
+        // console.log("getData");
         setCart(previousCart)
-    }, [])
+    }, [count])
 
 
     const handleAddProduct = (product) => {
@@ -48,10 +53,12 @@ const Shop = () => {
     return (
         <div className="twin-container">
             <div className="product-container">
+                {/* <h1><button onClick={() => setCount(count+1)}>Count: {count}</button></h1> */}
 
                 {
                     products.map(product => <Product
                         key={product.key}
+                        count={count}
                         showAddToCart={true}
                         handleAddProduct={handleAddProduct}
                         product={product}></Product>)
@@ -61,7 +68,7 @@ const Shop = () => {
             <div className="cart-container">
                 {/* <h3>This is cart</h3>
                 <h5>Order Summary: {cart.length}</h5> */}
-                <Cart cart={cart}>
+                <Cart count={count} cart={cart}>
                     <Link to="/review">
                         <button className="checkout-button">
                             <FontAwesomeIcon icon={faShoppingCart} /> Review Order

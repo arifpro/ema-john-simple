@@ -1,0 +1,12 @@
+.main {
+    text-align: center;
+}
+
+.main button {
+    background-color: white;
+    border: 0ch;
+}
+
+.main button:hover {
+    transform: scale(1.15);
+}

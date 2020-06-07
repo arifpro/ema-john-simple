@@ -1,3 +1,47 @@
+
+
+# Ema John E-commerce Site
+An e-commerce site  
+- Customers can order their products online. 
+- Firebase authentication is used
+- StripeJS is used for payment method
+
+
+## Deployment
+This website is deployed on Firebase. [Click here](https://simple-ema-john.web.app/) to visit.
+
+## Screenshots
+
+### Homepage
+![alt text](https://i.ibb.co/ydS8dmt/ema-john1.png)
+
+### Before Login
+![alt text](https://i.ibb.co/syqM8zn/ema-john2.png)
+
+### After Login
+![alt text](https://i.ibb.co/Yk1ngB7/ema-john3.png)
+
+### Checkout
+![alt text](https://i.ibb.co/ZMVyGJP/ema-john4.png)
+
+### Shipment Details
+![alt text](https://i.ibb.co/J7DBcQL/ema-john5.png)
+
+### Payment Successful
+![alt text](https://i.ibb.co/6D6645k/ema-john6.png)
+
+
+## Tech/framework used
+- React
+- HTML
+- CSS
+- BOOTSTRAP
+- Firebase authentication
+- Stripe.js
+- Firebase Hosting
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

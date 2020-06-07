@@ -7,6 +7,18 @@ An e-commerce site
 - StripeJS is used for payment method
 
 
+## Tech/framework used
+- React
+- HTML
+- CSS
+- BOOTSTRAP
+- Firebase authentication
+- Stripe.js
+- Firebase Hosting
+
+
+
+
 ## Deployment
 This website is deployed on Firebase. [Click here](https://simple-ema-john.web.app/) to visit.
 
@@ -31,14 +43,7 @@ This website is deployed on Firebase. [Click here](https://simple-ema-john.web.a
 ![alt text](https://i.ibb.co/6D6645k/ema-john6.png)
 
 
-## Tech/framework used
-- React
-- HTML
-- CSS
-- BOOTSTRAP
-- Firebase authentication
-- Stripe.js
-- Firebase Hosting
+
 
 
 

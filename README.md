@@ -1,6 +1,6 @@
+# [Ema John E-commerce Site](https://simple-ema-john.web.app/) &middot; [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![Author Arif](https://img.shields.io/badge/Author-Arif-%3C%3E)](https://www.facebook.com/ProArif0)
 
 
-# Ema John E-commerce Site
 An e-commerce site  
 - Customers can order their products online. 
 - Firebase authentication is used
